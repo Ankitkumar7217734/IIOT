@@ -25,8 +25,7 @@ export const allQuestions: Question[] = [
   {
     id: "1-3",
     week: 1,
-    question:
-      "State whether the following statement is True or False: IoT is one of the technologies that enable smart farms.",
+    question: "IoT is one of the technologies that enable smart farms.",
     options: ["True", "False"],
     answer: "a. True",
     explanation:
@@ -36,7 +35,7 @@ export const allQuestions: Question[] = [
     id: "1-4",
     week: 1,
     question:
-      "State whether the following statement is True or False: In M2M, it is mandatory that the interactions between the machines and devices happen through a cloud computing infrastructure.",
+      "In M2M, it is mandatory that the interactions between the machines and devices happen through a cloud computing infrastructure.",
     options: ["True", "False"],
     answer: "b. False",
     explanation:
@@ -56,7 +55,7 @@ export const allQuestions: Question[] = [
     id: "1-6",
     week: 1,
     question:
-      "State whether the following statement is true or false: In multi-homing a node/network is connected to only two networks for improved reliability.",
+      "In multi-homing a node/network is connected to only two networks for improved reliability.",
     options: ["True", "False"],
     answer: "b. False",
     explanation:
@@ -80,7 +79,7 @@ export const allQuestions: Question[] = [
     id: "1-8",
     week: 1,
     question:
-      "State whether the following statement is True or False: The decreasing number of devices in IoT is expected to result in an address crunch.",
+      "The decreasing number of devices in IoT is expected to result in an address crunch.",
     options: ["True", "False"],
     answer: "b. False",
     explanation:
@@ -104,7 +103,7 @@ export const allQuestions: Question[] = [
     id: "1-10",
     week: 1,
     question:
-      "State whether the following statement is true or false: The resolution of a sensor is the maximum change it can detect in the quantity that it is measuring.",
+      "The resolution of a sensor is the maximum change it can detect in the quantity that it is measuring.",
     options: ["False", "True"],
     answer: "a. False",
     explanation:
@@ -219,7 +218,7 @@ export const allQuestions: Question[] = [
     id: "2-4",
     week: 2,
     question:
-      "State whether the following statement is true or false: SMQTT is an extension of MQTT which uses lightweight attribute based encryption. It has three main stages.",
+      "SMQTT is an extension of MQTT which uses lightweight attribute based encryption. It has three main stages.",
     options: ["True", "False"],
     answer: "b. False",
     explanation:
@@ -299,7 +298,7 @@ export const allQuestions: Question[] = [
     id: "2-11",
     week: 2,
     question:
-      "State whether the following statement is true or false: IEEE 802.15.5 was developed for low data rate monitoring and control applications and extended life low power communication uses.",
+      "IEEE 802.15.5 was developed for low data rate monitoring and control applications and extended life low power communication uses.",
     options: ["True", "False"],
     answer: "b. False",
     explanation:
@@ -317,8 +316,7 @@ export const allQuestions: Question[] = [
   {
     id: "2-13",
     week: 2,
-    question:
-      "State whether the following statement is True or False: The IEEE 802.15.4 operates in ISM band.",
+    question: "The IEEE 802.15.4 operates in ISM band.",
     options: ["True", "False"],
     answer: "a. True",
     explanation:
@@ -337,7 +335,7 @@ export const allQuestions: Question[] = [
     id: "2-15",
     week: 2,
     question:
-      "State whether the following statement is True or False: Generation of Route Requests (RREQs) by a LOADng Router for discovering a route to a destination is a valid operation of the LOADng routing protocol.",
+      "Generation of Route Requests (RREQs) by a LOADng Router for discovering a route to a destination is a valid operation of the LOADng routing protocol.",
     options: ["False", "True"],
     answer: "b. True",
     explanation:
@@ -357,7 +355,7 @@ export const allQuestions: Question[] = [
     id: "3-2",
     week: 3,
     question:
-      "State whether the following statement is true or false: The HART physical layer is derived from IEEE 802.15.4 protocol and operates only in 2.5 GHz ISM band.",
+      "The HART physical layer is derived from IEEE 802.15.4 protocol and operates only in 2.5 GHz ISM band.",
     options: ["False", "True"],
     answer: "a. False",
     explanation:
@@ -367,7 +365,7 @@ export const allQuestions: Question[] = [
     id: "3-3",
     week: 3,
     question:
-      "State whether the following statement is True or False: Each node is supervised by the application manager and it guides them on when and where to send packets.",
+      "Each node is supervised by the application manager and it guides them on when and where to send packets.",
     options: ["True", "False"],
     answer: "b. False",
     explanation:
@@ -392,7 +390,7 @@ export const allQuestions: Question[] = [
     id: "3-5",
     week: 3,
     question:
-      "State whether the following statement is true or false: The Network Manager supervises each node in the network and guides them on when and where to send packets.",
+      "The Network Manager supervises each node in the network and guides them on when and where to send packets.",
     options: ["True", "False"],
     answer: "a. True",
     explanation:
@@ -430,8 +428,7 @@ export const allQuestions: Question[] = [
   {
     id: "3-8",
     week: 3,
-    question:
-      "State whether the following statement is true or false: NFC devices work on the principle of magnetic introduction.",
+    question: "NFC devices work on the principle of magnetic introduction.",
     options: ["True", "False"],
     answer: "b. False",
     explanation:
@@ -456,7 +453,7 @@ export const allQuestions: Question[] = [
     id: "3-10",
     week: 3,
     question:
-      "State whether the following statement is true or false: Booking in Bluetooth is the process of forming a connection between two Bluetooth devices.",
+      "Booking in Bluetooth is the process of forming a connection between two Bluetooth devices.",
     options: ["True", "False"],
     answer: "b. False",
     explanation:
@@ -466,7 +463,7 @@ export const allQuestions: Question[] = [
     id: "3-11",
     week: 3,
     question:
-      "State whether the following statement is true or false: Class 1 Bluetooth radios are used primarily in industrial use cases and have a range of 100 meters or 300 feet.",
+      "Class 1 Bluetooth radios are used primarily in industrial use cases and have a range of 100 meters or 300 feet.",
     options: ["True", "False"],
     answer: "a. True",
     explanation:
@@ -494,7 +491,7 @@ export const allQuestions: Question[] = [
     id: "3-14",
     week: 3,
     question:
-      "State whether the following statement is true or false: Selfish nodes are typified by their unwillingness to cooperate, as the protocol requires whenever there is a personal cost involved.",
+      "Selfish nodes are typified by their unwillingness to cooperate, as the protocol requires whenever there is a personal cost involved.",
     options: ["True", "False"],
     answer: "a. True",
     explanation:
@@ -543,8 +540,7 @@ export const allQuestions: Question[] = [
   {
     id: "4-3",
     week: 4,
-    question:
-      "State whether the following statement is true or false: Agricultural intrusion detection uses NFC sensors.",
+    question: "Agricultural intrusion detection uses NFC sensors.",
     options: ["True", "False"],
     answer: "b. False",
     explanation:
@@ -597,7 +593,7 @@ export const allQuestions: Question[] = [
     id: "4-7",
     week: 4,
     question:
-      "State whether the following statement is true or false: Voluntary Sensing allows distributed sensing carried by humans and the goal is not just to collect data but to allow the common people to assess and share the knowledge.",
+      "Voluntary Sensing allows distributed sensing carried by humans and the goal is not just to collect data but to allow the common people to assess and share the knowledge.",
     options: ["False", "True"],
     answer: "a. False",
     explanation:
@@ -606,8 +602,7 @@ export const allQuestions: Question[] = [
   {
     id: "4-8",
     week: 4,
-    question:
-      "State whether the following statement is true or false: UAV networks use a ring topology.",
+    question: "UAV networks use a ring topology.",
     options: ["True", "False"],
     answer: "b. False",
     explanation: "UAV networks use mesh or star networks, not ring topology.",
@@ -665,8 +660,7 @@ export const allQuestions: Question[] = [
   {
     id: "4-13",
     week: 4,
-    question:
-      "State whether the following statement is true or false: FANETs are flying ad hoc networks.",
+    question: "FANETs are flying ad hoc networks.",
     options: ["True", "False"],
     answer: "a. True",
     explanation: "FANETs are flying ad hoc networks.",
@@ -675,7 +669,7 @@ export const allQuestions: Question[] = [
     id: "4-14",
     week: 4,
     question:
-      "State whether the following statement is true or false: SCADA is designed for isolated systems using proprietary solutions, whereas M2M is designed for cross-platform integration.",
+      "SCADA is designed for isolated systems using proprietary solutions, whereas M2M is designed for cross-platform integration.",
     options: ["True", "False"],
     answer: "a. True",
     explanation:
@@ -684,8 +678,7 @@ export const allQuestions: Question[] = [
   {
     id: "4-15",
     week: 4,
-    question:
-      "State whether the following statement is true or false: Low-end sensor nodes are static, energy-hungry, and complex.",
+    question: "Low-end sensor nodes are static, energy-hungry, and complex.",
     options: ["True", "False"],
     answer: "b. False",
     explanation:
@@ -1042,7 +1035,7 @@ export const allQuestions: Question[] = [
     id: "6-15",
     week: 6,
     question:
-      "State whether the following statement is true or false: Python allows us to only read files. Writing to files is not possible.",
+      "Python allows us to only read files. Writing to files is not possible.",
     options: ["True", "False"],
     answer: "b. False",
     explanation: "Python allows both reading from and writing to files.",

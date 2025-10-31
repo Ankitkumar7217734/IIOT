@@ -73,7 +73,7 @@ const Results: React.FC<ResultsProps> = ({
                     {userAnswerText}
                   </span>
                   <span className="ml-2">
-                    Correct: {" "}
+                    Correct:{" "}
                     <span className="font-semibold text-blue-700">
                       {question.answer}
                     </span>
@@ -121,11 +121,11 @@ const Results: React.FC<ResultsProps> = ({
               />
               <div className="bg-white border border-black p-4 rounded-lg">
                 <p className="font-bold text-blue-700">
-                  Correct Answer: {" "}
+                  Correct Answer:{" "}
                   <span className="font-normal">{question.answer}</span>
                 </p>
                 <p className="font-bold text-blue-700 mt-2">
-                  Explanation: {" "}
+                  Explanation:{" "}
                   <span className="font-normal">{question.explanation}</span>
                 </p>
               </div>

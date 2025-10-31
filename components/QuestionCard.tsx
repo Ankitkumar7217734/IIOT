@@ -78,13 +78,13 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
 
           return (
             <label key={index} className={labelClasses}>
-            <input
-              type="radio"
-              name={`question-${question.id}`}
-              className="hidden"
-              checked={selectedAnswer === index}
-              onChange={() => onAnswerSelect(question.id, index)}
-            />
+              <input
+                type="radio"
+                name={`question-${question.id}`}
+                className="hidden"
+                checked={selectedAnswer === index}
+                onChange={() => onAnswerSelect(question.id, index)}
+              />
               <span className={letterClasses}>{optionsLetters[index]}.</span>
               <span className={textClasses}>{option}</span>
             </label>
