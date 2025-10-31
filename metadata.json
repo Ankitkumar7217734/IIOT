@@ -1,0 +1,5 @@
+{
+  "name": "IoT Concepts Quiz",
+  "description": "An interactive quiz application to test your knowledge on the Internet of Things, covering various topics from fundamentals to advanced concepts. Select weeks, take the quiz, and review your answers with detailed explanations.",
+  "requestFramePermissions": []
+}
