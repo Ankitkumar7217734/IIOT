@@ -92,6 +92,15 @@ const App: React.FC = () => {
     setTimeRemaining(null);
   }, []);
 
+  const handleRetakeQuiz = useCallback(() => {
+    if (currentQuestions.length === 0) return;
+    setUserAnswers({});
+    setScore(0);
+    setCurrentQuestionIndex(0);
+    setTimeRemaining(timerOption ? timerOption * 60 : null);
+    setQuizState("in_progress");
+  }, [currentQuestions.length, timerOption]);
+
   useEffect(() => {
     if (
       quizState !== "in_progress" ||
@@ -140,7 +149,8 @@ const App: React.FC = () => {
             questions={currentQuestions}
             userAnswers={userAnswers}
             score={score}
-            onRestart={handleRestart}
+            onRestart={handleRetakeQuiz}
+            onHome={handleRestart}
           />
         );
       case "selecting":

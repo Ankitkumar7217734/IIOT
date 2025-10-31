@@ -7,6 +7,7 @@ interface ResultsProps {
   userAnswers: Record<string, number>;
   score: number;
   onRestart: () => void;
+  onHome: () => void;
 }
 
 const optionMap: Record<string, number> = { a: 0, b: 1, c: 2, d: 3 };
@@ -31,6 +32,7 @@ const Results: React.FC<ResultsProps> = ({
   userAnswers,
   score,
   onRestart,
+  onHome,
 }) => {
   const totalQuestions = questions.length;
   const percentage =
@@ -81,12 +83,20 @@ const Results: React.FC<ResultsProps> = ({
             })}
           </ul>
         </div>
-        <button
-          onClick={onRestart}
-          className="px-8 py-3 font-bold text-blue-700 bg-white border-2 border-black rounded-lg shadow-md hover:bg-blue-50 transition-all"
-        >
-          Try Again
-        </button>
+        <div className="flex flex-col gap-4 items-center justify-center sm:flex-row">
+          <button
+            onClick={onRestart}
+            className="px-8 py-3 font-bold text-blue-700 bg-white border-2 border-black rounded-lg shadow-md hover:bg-blue-50 transition-all"
+          >
+            Try Again
+          </button>
+          <button
+            onClick={onHome}
+            className="px-8 py-3 font-bold text-blue-700 bg-white border-2 border-black rounded-lg shadow-md hover:bg-blue-50 transition-all"
+          >
+            Return Home
+          </button>
+        </div>
       </div>
 
       <div className="space-y-6">
