@@ -6,6 +6,8 @@ interface QuestionCardProps {
   questionNumber: number;
   selectedAnswer?: number;
   onAnswerSelect: (questionId: string, optionIndex: number) => void;
+  showCorrect?: boolean;
+  userAnswerIncorrect?: boolean;
 }
 
 const CodeBlock: React.FC<{ code: string }> = ({ code }) => (
@@ -19,8 +21,15 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
   questionNumber,
   selectedAnswer,
   onAnswerSelect,
+  showCorrect = false,
+  userAnswerIncorrect = false,
 }) => {
   const optionsLetters = ["a", "b", "c", "d"];
+  const correctIndex = question.answer
+    ? ["a", "b", "c", "d"].indexOf(
+        question.answer.split(".")[0].trim().toLowerCase()
+      )
+    : -1;
 
   return (
     <div className="bg-white p-6 rounded-xl shadow-lg transition-shadow hover:shadow-xl border border-black">
@@ -40,15 +49,35 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
       )}
       {question.code && <CodeBlock code={question.code} />}
       <div className="space-y-3">
-        {question.options.map((option, index) => (
-          <label
-            key={index}
-            className={`flex items-center p-4 border-2 rounded-lg cursor-pointer transition-all duration-200 ${
-              selectedAnswer === index
-                ? "bg-blue-500 border-black text-white shadow-lg"
-                : "bg-white border-black hover:bg-blue-50"
-            }`}
-          >
+        {question.options.map((option, index) => {
+          const isSelected = selectedAnswer === index;
+          const isCorrectOption = showCorrect && index === correctIndex;
+          const isIncorrectSelection =
+            userAnswerIncorrect && isSelected && !isCorrectOption;
+
+          const baseClasses =
+            "flex items-center p-4 border-2 rounded-lg cursor-pointer transition-all duration-200";
+
+          let labelClasses = `${baseClasses} bg-white border-black hover:bg-blue-50`;
+          let letterClasses = "font-semibold mr-3 text-blue-700";
+          let textClasses = "text-blue-700";
+
+          if (isCorrectOption) {
+            labelClasses = `${baseClasses} bg-green-500 border-green-700 text-white`;
+            letterClasses = "font-semibold mr-3 text-white";
+            textClasses = "text-white";
+          } else if (isIncorrectSelection) {
+            labelClasses = `${baseClasses} bg-red-500 border-red-700 text-white`;
+            letterClasses = "font-semibold mr-3 text-white";
+            textClasses = "text-white";
+          } else if (isSelected) {
+            labelClasses = `${baseClasses} bg-blue-500 border-black text-white shadow-lg`;
+            letterClasses = "font-semibold mr-3 text-white";
+            textClasses = "text-white";
+          }
+
+          return (
+            <label key={index} className={labelClasses}>
             <input
               type="radio"
               name={`question-${question.id}`}
@@ -56,22 +85,11 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
               checked={selectedAnswer === index}
               onChange={() => onAnswerSelect(question.id, index)}
             />
-            <span
-              className={`font-semibold mr-3 ${
-                selectedAnswer === index ? "text-white" : "text-blue-700"
-              }`}
-            >
-              {optionsLetters[index]}.
-            </span>
-            <span
-              className={`${
-                selectedAnswer === index ? "text-white" : "text-blue-700"
-              }`}
-            >
-              {option}
-            </span>
-          </label>
-        ))}
+              <span className={letterClasses}>{optionsLetters[index]}.</span>
+              <span className={textClasses}>{option}</span>
+            </label>
+          );
+        })}
       </div>
     </div>
   );

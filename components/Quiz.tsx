@@ -70,6 +70,8 @@ const Quiz: React.FC<QuizProps> = ({
         questionNumber={questionNumber}
         selectedAnswer={userAnswers[question.id]}
         onAnswerSelect={onAnswerSelect}
+        showCorrect={false}
+        userAnswerIncorrect={false}
       />
 
       <div className="flex justify-between items-center pt-4">
