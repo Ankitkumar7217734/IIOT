@@ -62,7 +62,7 @@ const App: React.FC = () => {
 
   const handlePreviousQuestion = useCallback(() => {
     if (currentQuestionIndex > 0) {
-      setCurrentQuestionIndex((prev) => prev + 1);
+      setCurrentQuestionIndex((prev) => prev - 1);
     }
   }, [currentQuestionIndex]);
 
